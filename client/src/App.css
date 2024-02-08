@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+}
+
+.page-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}

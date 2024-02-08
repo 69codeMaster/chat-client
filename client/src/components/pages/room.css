@@ -1,9 +1,0 @@
-.room {
-}
-
-.room-layout {
-  height: 100%;
-  display: grid;
-  place-content: center;
-  background-color: #aa9999;
-}

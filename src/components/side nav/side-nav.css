@@ -1,6 +1,6 @@
 .side-nav {
   padding: 1rem;
-  background: rgba(20, 20, 20, 0.6);
+  background: var(--primary-700);
 }
 
 .rooms-nav {

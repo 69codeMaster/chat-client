@@ -14,3 +14,12 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.room {
+  flex-grow: 1;
+}

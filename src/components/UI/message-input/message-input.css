@@ -6,7 +6,7 @@
 .input-and-icon {
   display: flex;
   border-radius: 0.5rem;
-  border: var(--primary-200) solid 1px;
+  border: var(--nav-color) solid 1px;
   padding: 0.2rem 0.5rem;
 }
 

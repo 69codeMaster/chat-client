@@ -1,10 +1,9 @@
 .room {
-  background-color: blanchedalmond;
+  color: white;
 }
 
 .room-layout {
   height: 100%;
   display: grid;
   place-content: center;
-  background-color: var(--color-primary);
 }

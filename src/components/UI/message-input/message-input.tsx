@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PaperPlaneSharp } from "react-ionicons";
-import "./text-input.css";
+import "./message-input.css";
 
 const TextInput: React.FC = () => {
   const [value, setValue] = useState<string>("");
@@ -17,7 +17,9 @@ const TextInput: React.FC = () => {
         />
         <PaperPlaneSharp
           onClick={() => alert(value)}
-          color={value.trim() === "" ? "var(--primary-200)" : "white"}
+          color={
+            value.trim() === "" ? "var(--nav-color)" : "var(--primary-100)"
+          }
           style={{ cursor: value.trim() !== "" ? "pointer" : "" }}
         />
       </div>

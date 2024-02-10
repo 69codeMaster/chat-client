@@ -1,13 +1,11 @@
 .side-nav {
-  padding: 1rem;
-  background: var(--primary-700);
+  background: var(--nav-color);
+  padding-block: 1rem;
 }
 
 .rooms-nav {
-  height: 40%;
-  overflow: hidden;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+
+  display: grid;
+  gap: 0.5em;
 }

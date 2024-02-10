@@ -3,7 +3,7 @@ import SideNav from "./components/side nav/side-nav";
 import CurrentRoomProvider from "./sotre/roomContext";
 import Room from "./components/pages/room";
 import "./App.css";
-import TextInput from "./components/UI/text-input/text-input";
+import TextInput from "./components/UI/message-input/message-input";
 
 function App() {
   return (

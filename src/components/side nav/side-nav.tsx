@@ -8,7 +8,7 @@ export default function SideNav({ room_titles }: side_nav_props) {
     <nav className="side-nav">
       <div className="rooms-nav">
         {room_titles.map((title, idx) => (
-          <NavItem key={idx} title={title as TITLES_TYPE} />
+          <NavItem id={idx} title={title as TITLES_TYPE} />
         ))}
       </div>
     </nav>

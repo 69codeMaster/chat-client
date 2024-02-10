@@ -18,6 +18,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  background-color: var(--body-color);
 }
 
 .room {

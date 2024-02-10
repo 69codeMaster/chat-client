@@ -1,8 +1,38 @@
 .nav-item {
   color: white;
   cursor: pointer;
+  padding: 1rem;
+  margin-inline-start: 1rem;
+  border-radius: 2rem 0 0 2rem;
+  position: relative;
 }
 
-.nav-item:hover {
-  color: red;
+.nav-item.active::after,
+.nav-item.active::before {
+  --border-radius: 1rem;
+  content: "";
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  right: 0;
+  background: var(--nav-color);
+}
+
+::view-transition-group(activeNav) {
+  animation-duration: 1s;
+}
+
+.nav-item.active::before {
+  top: calc(var(--border-radius) * -1);
+  border-radius: 0 0 2rem 0;
+  box-shadow: 5px 5px 0 5px var(--body-color);
+}
+.nav-item.active::after {
+  bottom: calc(var(--border-radius) * -1);
+  border-radius: 0 2rem 0 0;
+  box-shadow: 5px -5px 0 5px var(--body-color);
+}
+.active {
+  background-color: var(--body-color);
+  view-transition-name: activeNav;
 }

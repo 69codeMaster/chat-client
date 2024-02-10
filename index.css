@@ -3,8 +3,8 @@
 }
 
 :root {
-  --color-primary: rgba(23, 23, 23);
-  --primary-700: rgb(13, 13, 13);
+  --body-color: rgb(13, 13, 13);
+  --nav-color: rgb(25, 41, 73);
   --primary-200: rgb(47, 47, 47);
-  --primary-100: rgb(71, 71, 74);
+  --primary-100: rgb(42, 80, 154);
 }

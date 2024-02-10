@@ -4,12 +4,12 @@ import { useCurrentRoom } from "../../../store/roomContext";
 import { flushSync } from "react-dom";
 
 export default function NavItem({ title, id }: nav_item_props) {
-  const { room, setContext } = useCurrentRoom();
+  const { room, setRoomContext: setRoom } = useCurrentRoom();
   const isActive = room.title === title;
   const handleClick = () => {
     document.startViewTransition(() => {
       flushSync(() => {
-        setContext({ title: title });
+        setRoom(title);
       });
     });
   };

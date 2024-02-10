@@ -1,4 +1,4 @@
-import { ROOM_TITLES } from "../data/dummy-data";
+import { ROOMS } from "../data/dummy-data";
 import SideNav from "./components/side nav/side-nav";
 import CurrentRoomProvider from "./store/roomContext";
 import Room from "./components/pages/room";
@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <CurrentRoomProvider>
         <div className="page-layout">
-          <SideNav room_titles={[...ROOM_TITLES]} />
+          <SideNav room_titles={ROOMS.map((room) => room.title)} />
           <div className="main">
             <Room />
             <TextInput />

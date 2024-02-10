@@ -1,4 +1,6 @@
-export const ROOM_TITLES = [
+import { v4 } from "uuid";
+
+const ROOM_TITLES = [
   "General",
   "Rust",
   "C++",
@@ -7,4 +9,16 @@ export const ROOM_TITLES = [
   "Python",
 ] as const;
 
-export type TITLES_TYPE = (typeof ROOM_TITLES)[number];
+export type ROOM = {
+  id: string;
+  title: (typeof ROOM_TITLES)[number];
+};
+
+export const ROOMS: ROOM[] = [
+  { id: v4(), title: ROOM_TITLES[0] },
+  { id: v4(), title: ROOM_TITLES[1] },
+  { id: v4(), title: ROOM_TITLES[2] },
+  { id: v4(), title: ROOM_TITLES[3] },
+  { id: v4(), title: ROOM_TITLES[4] },
+  { id: v4(), title: ROOM_TITLES[5] },
+];

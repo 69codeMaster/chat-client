@@ -1,12 +1,12 @@
 import { createContext, useContext, useState } from "react";
 import { room_context, provider_props } from "./roomContext-types";
-import { room_props } from "../components/pages/room-types";
+import { ROOM as room } from "../../data/dummy-data";
+import { ROOMS } from "../../data/dummy-data";
 
+const defaultRoom = ROOMS.find((room) => room.title === "General")!;
 const currentRoom = createContext<room_context>({
-  room: {
-    title: "General",
-  },
-  setContext: () => {},
+  room: defaultRoom,
+  setRoomContext: () => {},
 });
 
 export function useCurrentRoom() {
@@ -14,13 +14,15 @@ export function useCurrentRoom() {
 }
 
 export default function CurrentRoomProvider({ children }: provider_props) {
-  const [context, setContext] = useState<room_props>({
-    title: "General",
-  });
+  const [room, setRoom] = useState<room>(defaultRoom);
 
   const value: room_context = {
-    room: context,
-    setContext: setContext,
+    room,
+    setRoomContext: (room_title) => {
+      if (room_title !== room.title) {
+        setRoom(ROOMS.find((room) => room.title === room_title)!);
+      }
+    },
   };
 
   return <currentRoom.Provider value={value}>{children}</currentRoom.Provider>;

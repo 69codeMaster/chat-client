@@ -1,8 +1,5 @@
 .room {
   color: white;
-}
-
-.room-layout {
   height: 100%;
   display: grid;
   place-content: center;

@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import { room_props } from "../components/pages/room-types";
+import { ROOM as room } from "./../../data/dummy-data";
 
 export type room_context = {
-  room: room_props;
-  setContext: React.Dispatch<React.SetStateAction<room_props>>;
+  room: room;
+  setRoomContext: (roomTitle: room["title"]) => void;
 };
 
 export type provider_props = {

@@ -1,6 +1,6 @@
 import { ROOM_TITLES } from "../data/dummy-data";
 import SideNav from "./components/side nav/side-nav";
-import CurrentRoomProvider from "./sotre/roomContext";
+import CurrentRoomProvider from "./store/roomContext";
 import Room from "./components/pages/room";
 import "./App.css";
 import TextInput from "./components/UI/message-input/message-input";

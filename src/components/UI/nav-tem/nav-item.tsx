@@ -1,6 +1,6 @@
 import "./nav-item.css";
 import { nav_item_props } from "./nav-item-types";
-import { useCurrentRoom } from "../../../sotre/roomContext";
+import { useCurrentRoom } from "../../../store/roomContext";
 import { flushSync } from "react-dom";
 
 export default function NavItem({ title, id }: nav_item_props) {
@@ -13,7 +13,7 @@ export default function NavItem({ title, id }: nav_item_props) {
       });
     });
   };
-  
+
   return (
     <div
       key={id}

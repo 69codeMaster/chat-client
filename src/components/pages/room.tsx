@@ -1,4 +1,4 @@
-import { useCurrentRoom } from "../../sotre/roomContext";
+import { useCurrentRoom } from "../../store/roomContext";
 import "./room.css";
 
 export default function Room() {

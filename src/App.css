@@ -9,6 +9,13 @@
   height: 100vh;
 }
 
+:root {
+  --body-color: rgb(13, 13, 13);
+  --nav-color: rgb(25, 41, 73);
+  --primary-200: rgb(47, 47, 47);
+  --primary-100: rgb(42, 80, 154);
+}
+
 .page-layout {
   height: 100%;
   display: grid;

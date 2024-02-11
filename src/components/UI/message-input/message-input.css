@@ -1,6 +1,7 @@
 .send-area {
   background-color: var(--color-primary);
   padding: 1rem 10rem;
+  view-transition-name: messageInput;
 }
 
 .input-and-icon {

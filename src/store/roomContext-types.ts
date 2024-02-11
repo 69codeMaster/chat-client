@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ROOM as room } from "./../../data/dummy-data";
+import { ROOM as room } from "./../../data/data-types";
 
 export type room_context = {
   room: room;

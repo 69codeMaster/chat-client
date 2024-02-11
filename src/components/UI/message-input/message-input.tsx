@@ -1,9 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { PaperPlaneSharp } from "react-ionicons";
+import { useCurrentRoom } from "../../../store/roomContext";
+import { addMessage } from "../../../services/api";
 import "./message-input.css";
 
 const TextInput: React.FC = () => {
-  const [value, setValue] = useState<string>("");
+  const { room } = useCurrentRoom();
+  const [message, setMessage] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const sendMessage = () => {
+    if (message.trim() === "") return;
+    console.log(`sending message : ${message}`);
+    addMessage(
+      { content: message, sender: "you", timestamp: Date.now() },
+      room.id
+    );
+    setMessage("");
+  };
+
+  useEffect(() => {
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") {
+        // event.preventDefault();
+        sendMessage();
+      }
+    });
+
+    return () => {
+      document.removeEventListener("keyup", sendMessage);
+    };
+  }, []);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+    console.log("roomchange");
+    setMessage("");
+  }, [room]);
 
   return (
     <div className="send-area">
@@ -11,16 +44,17 @@ const TextInput: React.FC = () => {
         <input
           className="input"
           type="text"
-          value={value}
-          onChange={({ target }) => setValue(target.value)}
+          value={message}
+          onChange={({ target }) => setMessage(target.value)}
           placeholder="Message"
+          ref={inputRef}
         />
         <PaperPlaneSharp
-          onClick={() => alert(value)}
+          onClick={sendMessage}
           color={
-            value.trim() === "" ? "var(--nav-color)" : "var(--primary-100)"
+            message.trim() === "" ? "var(--nav-color)" : "var(--primary-100)"
           }
-          style={{ cursor: value.trim() !== "" ? "pointer" : "" }}
+          style={{ cursor: message.trim() !== "" ? "pointer" : "" }}
         />
       </div>
     </div>

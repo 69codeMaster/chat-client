@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { room_context, provider_props } from "./roomContext-types";
-import { ROOM as room } from "../../data/dummy-data";
+import { ROOM as room } from "../../data/data-types";
 import { ROOMS } from "../../data/dummy-data";
 
 const defaultRoom = ROOMS.find((room) => room.title === "General")!;

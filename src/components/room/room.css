@@ -1,0 +1,11 @@
+.room {
+  color: white;
+  height: 100%;
+  padding: 2rem;
+}
+
+.messages-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

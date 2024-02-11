@@ -1,4 +1,4 @@
-import { message_props } from "./message-types";
+import { Message as message_props } from "./message-types";
 import "./message.css";
 
 const Message = ({ content, sender, timestamp }: message_props) => {

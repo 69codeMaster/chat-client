@@ -1,7 +1,7 @@
 import { ROOMS } from "../data/dummy-data";
 import SideNav from "./components/side nav/side-nav";
 import CurrentRoomProvider from "./store/roomContext";
-import Room from "./components/pages/room";
+import Room from "./components/room/room";
 import "./App.css";
 import TextInput from "./components/UI/message-input/message-input";
 

@@ -1,5 +1,5 @@
-export type message_props = {
+export type Message = {
   sender: string;
-  timestamp: Date;
+  timestamp: number;
   content: string;
 };
